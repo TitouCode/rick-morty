@@ -1,0 +1,27 @@
+//////////////////////////////////////////////////////
+// ALL GLOBAL VARIABLES SHOULD BE REFERENCED HERE ///
+////////////////////////////////////////////////////
+
+
+
+// COLORS
+$black: black;
+$white: white;
+
+$green: rgb(73, 222, 201);
+$green-fade: rgba(73, 222, 201, 0.3);
+
+$red: #de494d;
+$grey: #c9c9c9;
+
+// #b3b3b3
+
+
+$colors: (
+    'green':        $green,
+    'green-fade':   $green-fade,
+    'red':          $red,
+    'white':        $white,
+    'black':        $black,
+    'grey':         $grey,
+)

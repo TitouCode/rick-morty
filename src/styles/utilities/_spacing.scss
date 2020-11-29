@@ -1,0 +1,9 @@
+/*
+* Spacing SCSS
+*/
+
+@for $i from 1 to 5 {
+    .mt-#{$i} {
+        margin-top: #{10 + (2 * $i)}px;
+    }
+}

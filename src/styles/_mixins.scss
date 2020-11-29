@@ -1,0 +1,33 @@
+///////////////////////////////////////////////////
+// ALL GLOBAL MIXINS SHOULD BE REFERENCED HERE ///
+/////////////////////////////////////////////////
+
+
+@mixin circle-after-hover($bg-color: green, $wh: 150px, $opacity: 1) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    &:hover, &.active {
+        cursor: pointer;
+        &::after {
+            height: $wh;
+            opacity: $opacity;
+            width: $wh;
+            transition: width .2s ease-out, height .2s ease-out, opacity .2s ease-out;
+        }    
+    }
+    &::after {
+        background-color: $bg-color;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 0;
+        position: absolute;
+        opacity: 0;
+        width: 0;
+        transition: width .2s ease-in, height .2s ease-in, opacity .2s ease-in;
+        z-index: -1;
+    }
+}

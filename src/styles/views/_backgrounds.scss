@@ -1,0 +1,25 @@
+/*
+* Backgrounds SCSS
+*/
+
+.bg-full-image {
+
+    &:before {
+        content: '';
+        height: 105vh;
+        filter: blur(8px) contrast(1.5);
+        left: -15px;
+        position: fixed;
+        top: -15px;
+        width: 105vw;
+        z-index: -1;
+    }
+
+    @for $i from 1 through 10 {
+        &.bg-image-#{$i}::before {
+            background: url('./assets/backgrounds/rick_morty_#{$i}.jpg') center;
+            background-size: cover; 
+        }
+    }
+    
+}
